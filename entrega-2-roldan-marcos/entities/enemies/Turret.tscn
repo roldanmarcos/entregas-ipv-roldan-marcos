@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bewjkm5oh72j7"]
+
+[ext_resource type="Texture2D" uid="uid://d2ug0mybgeebc" path="res://assets/textures/turret.png" id="1_ksho8"]
+[ext_resource type="Script" uid="uid://bbx11824f52bl" path="res://entities/enemies/turret.gd" id="2_ltjpe"]
+
+[node name="Turret" type="Sprite2D" unique_id=918111149]
+texture = ExtResource("1_ksho8")
+script = ExtResource("2_ltjpe")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1883960542]
+
+[node name="Timer" type="Timer" parent="." unique_id=1499907252]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
