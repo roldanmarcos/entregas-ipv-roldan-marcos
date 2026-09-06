@@ -1,12 +1,14 @@
-extends Sprite2D
+extends CharacterBody2D
+class_name Player
 
 @onready var cannon: Node = $Cannon
 
 @export var ACCELERATION: float = 20.0
 @export var H_SPEED_LIMIT: float = 600.0
 @export var FRICTION_WEIGHT: float = 0.1
+@export var JUMP_SPEED: float = -50
+@export var GRAVITY: float = 2
 
-var velocity: Vector2 = Vector2.ZERO
 var projectile_container: Node
 
 func initialize(projectile_container: Node) -> void:
@@ -40,4 +42,10 @@ func _physics_process(delta: float) -> void:
 		# Ternary if: {true code} if {condition} else {false code}
 		velocity.x = lerp(velocity.x, 0.0, FRICTION_WEIGHT) if abs(velocity.x) > 1.0 else 0.0
 	
-	position += velocity * delta
+	if Input.is_action_just_pressed("jump"):
+		velocity.y = JUMP_SPEED
+	
+	velocity.y += GRAVITY
+	move_and_slide()
+	
+#	position += velocity * delta

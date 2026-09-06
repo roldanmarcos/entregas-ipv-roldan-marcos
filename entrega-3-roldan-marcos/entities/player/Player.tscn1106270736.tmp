@@ -12,9 +12,10 @@ height = 64.127014
 
 [node name="Player" type="CharacterBody2D" unique_id=287001647]
 position = Vector2(-0.0635071, 0.165405)
-collision_layer = 2
-collision_mask = 2
 script = ExtResource("1")
+ACCELERATION = null
+H_SPEED_LIMIT = null
+FRICTION_WEIGHT = null
 
 [node name="Body" type="Sprite2D" parent="." unique_id=311480258]
 texture = ExtResource("2")
