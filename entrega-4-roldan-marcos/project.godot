@@ -8,17 +8,24 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="Proyecto Godot - Clase 5"
+config/name="entrega-4-roldan-marcos"
 run/main_scene="res://src/Main.tscn"
-config/features=PackedStringArray("4.4")
+config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
 
 [display]
 
-window/size/viewport_width=800
-window/stretch/mode="2d"
+window/size/viewport_width=288
+window/size/viewport_height=216
+window/size/window_width_override=1152
+window/size/window_height_override=864
+window/stretch/mode="viewport"
 
 [input]
 
