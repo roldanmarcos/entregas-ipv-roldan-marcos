@@ -10,14 +10,12 @@ extends GenericStateMachine
 ## la máquina de estado no se inicializa.
 @export var character: Node
 
-
 # Asignamos el character a cada PlayerState
 func _setup() -> void:
 	if character == null:
 		printerr("%s: character is not defined!" % name)
 	for state: PlayerState in states_list:
 		state.character = character
-
 
 ## Esta función deriva el handleo de cada golpe que recibe
 ## el personaje al estado actual particular, en vez de vincular
@@ -26,8 +24,10 @@ func _setup() -> void:
 func notify_hit(amount: int) -> void:
 	current_state.handle_event(&"hit", amount)
 
-
 ## Esta función no se utiliza aun, ya que aun no contamos con
 ## una pool de HP variable.
 func notify_healed(amount: int) -> void:
 	current_state.handle_event(&"healed", amount)
+
+func _on_player_hit(amount: int) -> void:
+	notify_hit(amount)

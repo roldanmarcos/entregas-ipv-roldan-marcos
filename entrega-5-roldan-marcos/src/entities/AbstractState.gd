@@ -41,7 +41,6 @@ func update(delta: float) -> void
 @abstract
 func _on_animation_finished(anim_name: StringName) -> void
 
-
 # Callback genérico para eventos manejados como strings.
 @abstract
 func handle_event(event: StringName, value = null) -> void

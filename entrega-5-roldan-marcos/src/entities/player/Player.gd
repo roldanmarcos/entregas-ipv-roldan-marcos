@@ -150,6 +150,7 @@ func _handle_hit(_amount: int = 1) -> void:
 func _remove() -> void:
 	set_physics_process(false)
 	collision_layer = 0
+	hide()
 
 
 # Wrapper sobre el llamado a animación para tener un solo punto de entrada controlable
@@ -157,3 +158,8 @@ func _remove() -> void:
 func _play_animation(animation: StringName) -> void:
 	if body_animations.has_animation(animation):
 		body_animations.play(animation)
+
+
+func _on_hit(amount: int) -> void:
+	#hit.emit(amount)
+	pass # Replace with function body.
