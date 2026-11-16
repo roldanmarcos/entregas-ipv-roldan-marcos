@@ -34,6 +34,9 @@ jobs:
           mkdir -p _site/entrega-4
           cp -r entrega-4-roldan-marcos/export/* _site/entrega-4/
 
+          mkdir -p _site/entrega-5
+          cp -r entrega-5-roldan-marcos/export/* _site/entrega-5/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
