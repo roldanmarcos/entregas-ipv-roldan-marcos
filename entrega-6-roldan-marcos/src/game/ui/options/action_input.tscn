@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dyb501xjxxews"]
+
+[ext_resource type="Script" uid="uid://d2w67yff04hjg" path="res://src/game/ui/options/action_input.gd" id="1_qkva8"]
+[ext_resource type="FontFile" uid="uid://bqt658n8k8iip" path="res://assets/fonts/DungeonFont.ttf" id="2_vk36t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooua1"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ujk5d"]
+
+[node name="ActionInput" type="HBoxContainer" unique_id=1541921860]
+script = ExtResource("1_qkva8")
+
+[node name="Input" type="Label" parent="." unique_id=1503795321]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vk36t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooua1")
+theme_override_styles/focus = SubResource("StyleBoxLine_ujk5d")
+text = "A"
+
+[node name="Action" type="Label" parent="." unique_id=1021837959]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vk36t")
+text = "Move Left"
